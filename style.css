@@ -1,0 +1,133 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #282c34;
+    color: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #61dafb;
+}
+
+/* Nome com sublinhado e cores RGB */
+h1 {
+    color: rgb(255, 255, 255);
+    transition: color 0.2s ease-in-out;
+}
+
+
+/* Estilo da navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0081d6;
+}
+
+/* Seções */
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    /* Todas as seções são ocultas inicialmente */
+}
+
+/* Seção visível */
+section.active {
+    display: block;
+    /* A seção ativa será exibida */
+}
+
+/* Ícones de contato */
+.icon-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.icon-list li {
+    margin: 0 15px;
+    font-size: 24px;
+}
+
+.icon-list li a {
+    color: #61dafb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.icon-list li a:hover {
+    color: #21a0f6;
+}
+
+/* Media Queries para dispositivos menores */
+
+/* Estilos para dispositivos com largura máxima de 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Empilha os itens da navegação em vez de exibi-los lado a lado */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+        /* Reduz o preenchimento das seções */
+        margin: 10px;
+        /* Reduz a margem nas seções */
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        /* Reduz o tamanho da fonte do cabeçalho principal */
+    }
+
+    .icon-list li {
+        margin: 0 10px;
+        /* Reduz o espaço entre os ícones de contato */
+        font-size: 20px;
+        /* Reduz o tamanho dos ícones */
+    }
+}
+
+/* Estilos para dispositivos com largura mínima de 769px (desktops e notebooks) */
+@media (min-width: 769px) {
+    /* Seus estilos para desktops permanecem como estão ou podem ser ajustados aqui */
+}

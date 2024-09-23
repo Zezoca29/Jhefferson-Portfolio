@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, suportando caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a página para ser responsiva, adaptando-se ao tamanho da tela do dispositivo -->
+    <title>Jhefferson Santos</title>
+    <!-- Título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para o arquivo de estilo CSS externo, que contém a estilização da página -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link para a biblioteca de ícones Font Awesome, que permite usar ícones facilmente -->
+</head>
+<body>
+    <header>
+        <h1>Jhefferson Santos</h1>
+        <!-- Cabeçalho principal (h1) com o nome do portfólio -->
+        <nav>
+            <ul>
+                <!-- Lista de navegação com links para diferentes seções da página -->
+                <li><a href="#" onclick="showSection('about')">Sobre mim</a></li>
+                <li><a href="#" onclick="showSection('projects')">Projetos</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contato</a></li>
+                <li><a href="#" onclick="showSection('talents')">Habilidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="active">
+        <!-- Seção "Sobre mim", visível por padrão -->
+        <h2>Sobre mim</h2>
+        <p>Olá, sou Jhefferson Santos, estudante de Engenharia de Software com experiência prática em Java, JavaScript
+        e Python. Tenho habilidades em bancos de dados e estou sempre em busca de aprimorar meus conhecimentos. 
+        Sou entusiasta de tecnologia e dedicado ao desenvolvimento de software.</p>
+        <!-- Descrição pessoal detalhando formação e interesses -->
+    </section>
+
+    <section id="projects" style="display: none;">
+        <!-- Seção "Projetos" oculta por padrão -->
+        <h2>Projetos</h2>
+        <ul>
+            <a href="https://github.com/Jhefferson-Santos?tab=projects" target="_blank">
+            <i class="fab fa-github"></i>
+            </a></li>
+        </ul>
+    </section>
+
+    <section id="contact" style="display: none;">
+        <!-- Seção "Contato" oculta por padrão -->
+        <h2>Contato</h2>
+        <ul class="icon-list">
+            <!-- Lista de ícones para contato, centralizados -->
+            <li>
+                <a href="https://api.whatsapp.com/send/?phone=5511984952923&text=Ol%C3%A1+Jhefferson%2C+tudo+bem%3F+Achei+o+seu+perfil+e+acredito+que+se+encaixa+no+que+procuro.+Podemos+conversar%3F" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <!-- Ícone do WhatsApp -->
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/jhefferson-vergara-santos-68016b22b/?originalSubdomain=br" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <!-- Ícone do LinkedIn -->
+                </a>
+            </li>
+            <li>
+                <a href="mailto:jvergarasantos25@gmail.com?subject=Assunto%20do%20Email&body=Olá%20Jhefferson,%20tudo%20bem?%20Achei%20o%20seu%20perfil%20e%20acredito%20que%20se%20encaixa%20no%20que%20procuro.%20Podemos%20conversar?">
+                    <i class="fas fa-envelope"></i>
+                    <!-- Ícone do Email -->
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="talents" style="display: none;">
+        <!-- Seção "Habilidades" oculta por padrão -->
+        <h2>Habilidades técnica</h2>
+        <p><ul> Java e SpringBoot;</ul>
+           <ul> JavaScript;</ul>
+           <ul> Python;</ul>
+           <ul> Banco de dados: SQL Server, My SQL;</ul>
+           <ul> Excel.</ul>
+        </p>
+        <!-- Descrição das habilidades -->
+    </section>
+
+    <script src="scripts.js"></script>
+    <script>
+        function showSection(sectionId) {
+            // Função para exibir a seção correspondente e ocultar as outras
+            const sections = document.querySelectorAll('section'); // Seleciona todas as seções da página
+            sections.forEach(section => {
+                // Itera sobre todas as seções
+                section.style.display = (section.id === sectionId) ? 'block' : 'none';
+                // Se o ID da seção atual corresponde ao ID passado, exibe; caso contrário, oculta
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
